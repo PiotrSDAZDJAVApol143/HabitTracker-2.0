@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS REMINDER (
+    id                  BIGINT PRIMARY KEY AUTO_INCREMENT,
+    MESSAGE             VARCHAR(128) NOT NULL,
+    REMINDER_TIME       TIME,
+    REMINDER_FREQUENCY  INTEGER,
+    FREQUENCY_UNIT      ENUM ('DAILY', 'WEEKLY', 'MONTHLY'),
+    habit_id            BIGINT,
+    goal_id             BIGINT,
+    FOREIGN KEY (habit_id) REFERENCES HABIT(id),
+    FOREIGN KEY (goal_id) REFERENCES GOAL(id)
+    );
