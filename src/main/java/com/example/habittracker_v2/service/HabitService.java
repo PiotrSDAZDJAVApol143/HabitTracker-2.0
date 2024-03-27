@@ -24,7 +24,11 @@ public class HabitService {
         habit = repository.save(habit);
         return mapper.toDto(habit);
     }
-
+    /**
+     * This method is used to get a goal by its id.
+     * @param goalId This is the id of the goal.
+     * @return Goal This returns the fetched goal.
+     */
     private Goal getGoalFromId(Long goalId) {
         if (goalId == null) {
             return null;

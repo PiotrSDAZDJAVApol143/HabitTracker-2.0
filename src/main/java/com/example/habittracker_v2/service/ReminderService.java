@@ -61,6 +61,12 @@ public class ReminderService {
         }
         reminderRepository.deleteById(id);
     }
+
+    /**
+     * This method is used to get a habit by its id.
+     * @param habitId This is the id of the habit.
+     * @return Habit This returns the fetched habit.
+     */
     private Habit getHabitFromId(Long habitId) {
         if (habitId == null) {
             return null;
@@ -69,18 +75,16 @@ public class ReminderService {
                 .orElseThrow(() -> new EntityNotFoundException("Habit not found with id: " + habitId));
     }
 
+    /**
+     * This method is used to get a goal by its id.
+     * @param goalId This is the id of the goal.
+     * @return Goal This returns the fetched goal.
+     */
     private Goal getGoalFromId(Long goalId) {
         if (goalId == null) {
             return null;
         }
         return goalRepository.findById(goalId)
                 .orElseThrow(() -> new EntityNotFoundException("Goal not found with id: " + goalId));
-    }
-    private Habit getGoalId(Long habitId) {
-        if (habitId == null) {
-            return null;
-        }
-        return habitRepository.findById(habitId)
-                .orElseThrow(() -> new EntityNotFoundException("Habit not found with id: " + habitId));
     }
 }

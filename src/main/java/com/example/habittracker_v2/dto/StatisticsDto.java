@@ -14,7 +14,9 @@ import java.util.List;
 public class StatisticsDto {
     private Long id;
     private Goal goal;
+    private String goalName;
     private Habit habit;
+    private String habitName;
     private List<Activity> activities;
     private Status status;
 

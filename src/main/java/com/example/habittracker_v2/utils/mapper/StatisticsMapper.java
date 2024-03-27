@@ -11,7 +11,9 @@ public class StatisticsMapper {
         StatisticsDto dto = new StatisticsDto();
         dto.setId(statistics.getId());
         dto.setGoal(statistics.getGoal());
+        dto.setGoalName(statistics.getGoal().getGoalName());
         dto.setHabit(statistics.getHabit());
+        dto.setHabitName(statistics.getHabit().getHabitName());
         dto.setActivities(statistics.getActivities());
         dto.setStatus(statistics.getStatus());
         return dto;

@@ -25,16 +25,15 @@ public class Statistics {
     @JoinColumn(name = "goal_id")
     private Goal goal;
 
-    @OneToOne
-    @JoinColumn(name = "goal_name")
+
+    @Column(name = "GOAL_NAME")
     private String goalName;
 
     @OneToOne
     @JoinColumn(name = "habit_id")
     private Habit habit;
 
-    @OneToOne
-    @JoinColumn(name = "habit_name")
+    @Column(name = "HABIT_NAME")
     private String habitName;
 
     @Column(name = "PROGRESS")

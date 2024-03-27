@@ -44,6 +44,11 @@ public class GoalService {
         return goalMapper.toDto(goal);
     }
 
+    /**
+     * This method is used to convert habit ids to habit objects.
+     * @param habitIds This is a list of habit ids.
+     * @return List<Habit> This returns a list of habits.
+     */
     private List<Habit> convertIdsToHabits(List<Long> habitIds) {
         if (habitIds == null) {
             return null;
